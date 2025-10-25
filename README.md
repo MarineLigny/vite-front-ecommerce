@@ -51,7 +51,7 @@ Le scope désigne la section de la codebase à laquelle le commit apporte des mo
 ex: feat (add-card-product) : define addCardButton component
 ```
 
-## Règle de Lint :
+## Paramétrer Lint pour créer des règles de commit :
 
 regarder la doc de @commitlint/config-conventional "pour le formatage des commits comme en entreprise. 
 Si pas déjà en librairie, faire le npm install puis echo, sinon faire juste le echo.
@@ -84,3 +84,25 @@ echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
 ajoute le fichier commit-msg dans .husky puis supprimer le fichier pre-commit qui ne sert à rien. 
 
 5. enfin tester vos commit avec un commit aléatoire, ex :git commit -m "pouet". husky devrait bloquer le commit. 
+
+## Paramétrer Eslint avec librairie React-hook et Jsx-ally
+
+Pensez à bien paramétrer Eslint pour qu'il ne soit pas obselète; Pour cela importer les plugins React-hook et Jsx-Ally et les lier à votre fichier eslints.config 
+
+**Attention** ici on a l'ancienne version de Eslint. 
+
+1. extends : 
+- ajouter React-hook/recommanded
+- ajouter jsx/ally/recommanded
+- vérifier la doc pour ajouter ou enlever des rules
+
+2. console.log :
+- ajouter dans rules : 'no-console': 'error',
+
+3. test:
+- ajouter un console.log dans App.tsx par exemple. Normalement une erreur apparait dessus (pas bloquant pour travailler).
+- testez le plugin qui veille à l’accessibilité de votre code, à savoir eslint-plugin-jsx-a11y
+``` 
+Ce plugin prévoit une règle, img-redundant-alt, qui sert à éviter l’inclusion des mots “image”, “picture” ou “photo”, en valeur d’un attribut alt. Autrement dit, quand elle est activée, cette règle invite à écrire “Tour Eiffel” au lieu de “Image de la tour Eiffel”. 
+```
+- lire la doc pour vérifier si on veut ajouter des erreurs à jsx-ally (recommanded/error)
