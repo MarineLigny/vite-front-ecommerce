@@ -106,3 +106,8 @@ Pensez à bien paramétrer Eslint pour qu'il ne soit pas obselète; Pour cela im
 Ce plugin prévoit une règle, img-redundant-alt, qui sert à éviter l’inclusion des mots “image”, “picture” ou “photo”, en valeur d’un attribut alt. Autrement dit, quand elle est activée, cette règle invite à écrire “Tour Eiffel” au lieu de “Image de la tour Eiffel”. 
 ```
 - lire la doc pour vérifier si on veut ajouter des erreurs à jsx-ally (recommanded/error)
+
+## Prettier
+
+1. lire la doc de Prettier pour l'installer. 
+2. ajouter les règles que l'on veut utiliser 

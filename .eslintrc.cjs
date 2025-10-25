@@ -18,5 +18,7 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'no-console': 'error',
+    'quotes': ['error', 'single'],
+    'jsx-quotes': ['error', 'prefer-single'],
   },
 }
