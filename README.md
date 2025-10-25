@@ -153,3 +153,12 @@ resolve: {
   ],
 },
 ```
+
+## configurer Tailwind
+
+Tailwind est bien pour créer un projet rapidement.
+
+1. importer la librairie Tailwind
+2. `npx tailwindcss init -p --ts`  
+   Grâce au --ts à la fin de la commande, le fichier tailwind.config.ts est en TypeScript
+3.
