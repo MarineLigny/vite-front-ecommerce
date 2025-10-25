@@ -161,4 +161,15 @@ Tailwind est bien pour créer un projet rapidement.
 1. importer la librairie Tailwind
 2. `npx tailwindcss init -p --ts`  
    Grâce au --ts à la fin de la commande, le fichier tailwind.config.ts est en TypeScript
-3.
+3. ajoutez content
+
+```ts
+import type { Config } from 'tailwindcss';
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} satisfies Config;
+```
