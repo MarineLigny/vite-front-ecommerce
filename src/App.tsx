@@ -1,14 +1,15 @@
-import AddCartButton from 'features/cart/add-cart-product/ui/addCartButton';
+import RemoveCartButton from "features/cart/remove-cart-product/ui/RemoveCartButton";
+
 
 
 function App() {
-  const addToCart = (): void => {
-    alert('Call API pour ajouter le produit au panier');
-  }
+  
 
   return (
     <>
-      <AddCartButton addToCart={addToCart} />
+      <RemoveCartButton removeFromCart={() => {
+        alert('Call API pour retirer le produit du panier');
+      }} />
     </>
   );
 }
