@@ -1,10 +1,14 @@
-import ProductSearch from 'features/product/search-products/ui/ProductSearch';
+import Header from 'common/layout/Header';
 
 function App() {
   const onSubmit = (search: string): void => {
-    console.log('Recherche de produit :', search);
+    console.log(`Recherche de produit: ${search}`);
   };
-  return <ProductSearch onSubmit={onSubmit} />;
+  const cartCount = 3;
+  return (
+    <>
+      <Header onSubmit={onSubmit} cartCount={cartCount} />
+    </>
+  );
 }
-
 export default App;
