@@ -173,3 +173,12 @@ export default {
   plugins: [],
 } satisfies Config;
 ```
+
+# Vocabulaire :
+
+--Traduction FR/EN-- :
+
+- **Cart** = Panier
+- **ui** = design
+- **common** =
+- **feature** =

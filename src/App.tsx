@@ -1,13 +1,17 @@
-import Button from 'common/design_system/Button';
+import AddCartButton from 'features/cart/add-cart-product/ui/addCartButton';
+
 
 function App() {
+  const addToCart = (): void => {
+    alert('Call API pour ajouter le produit au panier');
+  }
 
   return (
     <>
-      <Button onClick={() => console.log('Retirer du panier')}>Retirer du panier</Button>
-      <Button variant='contained' onClick={() => console.log('Ajouter au panier')}>Ajouter au panier</Button>
+      <AddCartButton addToCart={addToCart} />
     </>
   );
 }
 
 export default App;
+
