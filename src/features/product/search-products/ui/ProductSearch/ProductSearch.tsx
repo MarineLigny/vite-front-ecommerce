@@ -1,4 +1,6 @@
 import type { ReactElement } from 'react';
+import { Search } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 
 const ProductSearch = (): ReactElement => {
   return (
@@ -10,6 +12,9 @@ const ProductSearch = (): ReactElement => {
         placeholder='Rechercher un produit...'
         aria-label='Rechercher un produit'
       />
+      <IconButton type='submit' aria-label='Rechercher'>
+        <Search />
+      </IconButton>
     </form>
   );
 };
